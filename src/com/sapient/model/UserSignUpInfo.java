@@ -1,8 +1,17 @@
 package com.sapient.model;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class UserSignUpInfo {
+	
+	@Size(min=2,max=30)
+	@Pattern(regexp = "[^0-9]*")
 	private String name;
+	
 	private String email;
+	
+	@Size(min=4, max=16)
 	private String userName;
 	private String password;
 	

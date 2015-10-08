@@ -39,37 +39,36 @@
 		<div class="container col-md-4 col-lg-4 col-xs-offset-4 well"
 			style="margin-top: 8%">
 			<form:form class="form-signin" action="/EventManagement/verify" method="post" commandName="command" >
-				<h2 class="form-signin-heading">Sign In</h2> 
+				<%-- <h2 class="form-signin-heading">Sign In</h2> 
  				<div class="form-group"> 
 					<h4 class="form-signin-heading form-inline">User Name</h4>
-					<form:input path="username"  class="form-control"
-						placeholder="User Name " required autofocus>
+					<form:input path="username"  class="form-control" placeholder="User Name " required autofocus/>
 			</div> 
 				<div class="form-group"> 
 				<h4 class="form-signin-heading">Password</h4> 
 					<form:input path="password"  class="form-control"
-						placeholder="Password" required>
+						placeholder="Password" required autofocus/>
  				</div> 
 				<div class="form-group"> 
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
 					In</button> 
- 				</div> 
+ 				</div>  --%>
 
-<!--  <table>  -->
-<!--  			<tr>  -->
-<!-- 				<td>Customer Name :</td>  -->
-<%-- 				<td><form:input path="username" /></td>  --%>
+  <table>  
+ 			<tr>  
+				<td>Customer Name :</td>  
+ 				<td><form:input path="username" /></td>
 
-<!-- 			</tr> -->
-<!-- 			<tr> -->
-<!-- 				<td>Customer Password :</td> -->
-<%-- 				<td><form:input path="password" /></td> --%>
+ 			</tr> 
+ 			<tr> 
+ 				<td>Customer Password :</td> 
+				<td><form:input path="password" /></td> 
 			
-<!-- 			</tr> -->
-<!-- 			<tr> -->
-<!-- 				<td colspan="3"><input type="submit" /></td> -->
-<!-- 			</tr> -->
-<!-- 		</table> -->
+ 			</tr> 
+ 			<tr> 
+ 				<td colspan="3"><input type="submit" /></td> 
+			</tr> 
+ 		</table> -
 
 				
 				

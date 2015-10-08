@@ -15,7 +15,6 @@ public class LoginController {
 	
 	@RequestMapping(value="/verify", method = RequestMethod.POST)
 	public String loginPage(UserLoginInfo login) {
-		
 		AuthenticateLogin authenticateLogin=new AuthenticateLogin();
 		boolean status=authenticateLogin.verifyUser(login.getUsername(), login.getPassword());
 		if(status){

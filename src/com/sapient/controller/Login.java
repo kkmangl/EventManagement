@@ -13,11 +13,6 @@ import com.sapient.model.UserLoginInfo;;
 
 @Controller
 public class Login {
-	@RequestMapping(value="/home", method= RequestMethod.GET)
-	public ModelAndView LoginController(){
-		ModelAndView model = new ModelAndView("login");
-		return model;
-	}
 	
 	@RequestMapping(value="/login",  method= RequestMethod.POST)
 	public ModelAndView LoginControl(@Valid @ModelAttribute("user") UserLoginInfo userlogin, BindingResult result){

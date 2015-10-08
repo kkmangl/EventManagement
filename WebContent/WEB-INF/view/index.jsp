@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -37,24 +38,46 @@
 	<div>
 		<div class="container col-md-4 col-lg-4 col-xs-offset-4 well"
 			style="margin-top: 8%">
-			<form class="form-signin" action="login" method="post">
-				<h2 class="form-signin-heading">Sign In</h2>
-				<div class="form-group">
+			<form:form class="form-signin" action="/EventManagement/verify" method="post" commandName="command" >
+				<h2 class="form-signin-heading">Sign In</h2> 
+ 				<div class="form-group"> 
 					<h4 class="form-signin-heading form-inline">User Name</h4>
-					<input type="text" name="uname"  class="form-control"
+					<form:input path="username"  class="form-control"
 						placeholder="User Name " required autofocus>
-				</div>
-				<div class="form-group">
-					<h4 class="form-signin-heading">Password</h4>
-					<input type="password" name="pass" class="form-control"
+			</div> 
+				<div class="form-group"> 
+				<h4 class="form-signin-heading">Password</h4> 
+					<form:input path="password"  class="form-control"
 						placeholder="Password" required>
-				</div>
-				<div class="form-group">
+ 				</div> 
+				<div class="form-group"> 
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
-						In</button>
-				</div>
-				<div class="form-group" style="text-align: center;"><a href="" >Forget password</a></div>
-			</form>
+					In</button> 
+ 				</div> 
+
+<!--  <table>  -->
+<!--  			<tr>  -->
+<!-- 				<td>Customer Name :</td>  -->
+<%-- 				<td><form:input path="username" /></td>  --%>
+
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td>Customer Password :</td> -->
+<%-- 				<td><form:input path="password" /></td> --%>
+			
+<!-- 			</tr> -->
+<!-- 			<tr> -->
+<!-- 				<td colspan="3"><input type="submit" /></td> -->
+<!-- 			</tr> -->
+<!-- 		</table> -->
+
+				
+				
+				
+				
+				
+<!-- 				<div class="form-group" style="text-align: center;"><a href="" >Forget password</a></div> -->
+			</form:form>
 
 		</div>
 	</div>

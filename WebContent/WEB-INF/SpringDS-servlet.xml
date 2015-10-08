@@ -10,20 +10,27 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context-4.0.xsd
 http://www.springframework.org/schema/mvc
-http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
- <context:component-scan base-package="com.sapient.controllers"/>
- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
- <property name="prefix" value="/WEB-INF/dynaviews/"></property>
- <property name="suffix" value=".jsp"></property>
+<!-- <bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/> -->
+<mvc:annotation-driven/>
+
+<!-- <mvc:resources mapping="/bootstrap/css/*" location="/views/bootstrap/css/" /> -->
+<!--     <mvc:resources mapping="/bootstrap/fonts/*" location="/views/bootstrap/fonts/" /> -->
+<!--     <mvc:resources mapping="/bootstrap/js/*" location="/views/bootstrap/js/" /> -->
+<!-- <mvc:resources mapping="/js/*" location="/views/js/" />  -->
+
+ <context:component-scan base-package="com.sapient.controller"/>
+ 
+ <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+     <property name="prefix" value="/WEB-INF/view/"></property>
+     <property name="suffix" value=".jsp"></property>
  </bean>
-<mvc:resources mapping="/views/bootstrap/css/*" location="/views/bootstrap/css/" />
-	<mvc:resources mapping="/views/bootstrap/fonts/*" location="/views/bootstrap/fonts/" />
-	<mvc:resources mapping="/views/bootstrap/js/*" location="/views/bootstrap/js/" />
-<mvc:resources mapping="/views/js/*" location="/views/js/" /> 
- <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-<property name="basename">
- <value>resources/welcome</value>
- </property>
-</bean>
+ 
+
+<!--  <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"> -->
+<!-- <property name="basename"> -->
+<!--  <value>resources/welcome</value> -->
+<!--  </property> -->
+<!-- </bean> -->
  </beans>

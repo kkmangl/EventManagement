@@ -1,6 +1,7 @@
 package com.sapient.model;
 
 public class UserLoginInfo {
+	
 	private String username;
 	private String password;
 	

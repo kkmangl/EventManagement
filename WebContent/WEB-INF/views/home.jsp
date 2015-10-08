@@ -65,8 +65,8 @@ body {
 			</div>
 		</div>
 	</nav>
-bhffffkjasdgb
-<c:forEach var="item" items="${requestScope.userBean.eventList }">
+
+<c:forEach var="item" items="${Event}">
 <form action="***------&&&" method="post" id="${item.eventId }">
 	<div style="margin-top: 70px">
 		<div class="container">

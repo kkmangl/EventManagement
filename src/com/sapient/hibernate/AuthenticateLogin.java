@@ -2,6 +2,7 @@ package com.sapient.hibernate;
 
 import java.util.List;
 
+
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -20,7 +21,7 @@ public class AuthenticateLogin {
 	{
 		SessionFactory factory;
         factory = new AnnotationConfiguration().configure().buildSessionFactory();
-        Session session = factory.openSession();System.out.println("Reporting ");
+        Session session = factory.openSession();
         Transaction tx = null;
         try{
         	System.out.println("Reporting ");

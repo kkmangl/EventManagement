@@ -24,11 +24,8 @@ public class AuthenticateLogin {
         Session session = factory.openSession();
         Transaction tx = null;
         try{
-        	System.out.println("Reporting ");
+        	
             tx = session.beginTransaction();
-//            UserLoginInfo user=new UserLoginInfo();
-           //Criteria criteria =session.createCriteria(UserLoginInfo.class);
-           //List contacts=criteria.list();
            String SQL_Query="from UserLoginInfo as user where user.username=? and user.password=?";
            
            Query query=session.createQuery(SQL_Query);

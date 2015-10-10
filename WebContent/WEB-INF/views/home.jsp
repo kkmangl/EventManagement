@@ -1,4 +1,5 @@
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%> 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,7 @@ $(document).ready(function(){
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="./Style/simple-sidebar.css">
+<!-- <link rel="stylesheet" href="./Style/simple-sidebar.css"> -->
 <style type="text/css">
 .navbar {
 	-webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4);
@@ -35,7 +36,7 @@ img {
 }
 
 body {
-	background: url('Images/wood_back.jpg') no-repeat fixed;
+	background: url("./bootstrap/Images/wood_back.jpg");
 }
 </style>
 </head>
@@ -49,14 +50,17 @@ body {
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="./home.jsp">Event Management</a>
+				<a class="navbar-brand" href="/EventManagement/redirect">Event Management</a>
 			</div>
 
 			<div class="collpase navbar-collapse" id="menue">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="./AddEvent.html">Add Event</a></li>
-					<li><a href="./dash.html">Dashboard</a></li>
+					<li><a href="/EventManagement/addEvent">Add Event</a></li>
+					<li><a href="/EventManagement/dashBoard">Dashboard</a></li>
+					
+					
+					
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="index.html"><span
@@ -65,9 +69,11 @@ body {
 			</div>
 		</div>
 	</nav>
+	
+	
+<c:forEach var="item" items="${eventlist}">
 
-<c:forEach var="item" items="${Event}">
-<form action="***------&&&" method="post" id="${item.eventId }">
+<form:form action="parameter?eid=${item.eventid }" method="post">
 	<div style="margin-top: 70px">
 		<div class="container">
 			<div class="jumbotron col-sm-12">
@@ -83,7 +89,7 @@ body {
 						</h2>
 					</div>
 					<div>
-						<h5>${item.date }</h5>
+					<h5>${item.eventdate }</h5> 
 					</div>
 					<div>
 						<a href="#" style="text-decoration: none;">${item.venue }</a>
@@ -91,12 +97,13 @@ body {
 					<div>
 						<h4>${item.description }</h4>
 					</div>
-					<button class="btn btn-success col-lg-offset-11 btn-lg"><span class="glyphicon glyphicon-plus"></span> Join </button>
+					<%-- <a id="byParameter" href="<c:url value="/parameter?eid=${item.eventid }"/>">Join</a> --%>
+					 <form:button  class="btn btn-success col-lg-offset-11 btn-lg" id="join"><span class="glyphicon glyphicon-plus"></span> Join </form:button> 
 				</div>
 			</div>
 		</div>
 	</div>
-	</form>
+	</form:form>
 	</c:forEach>	
 		
 		

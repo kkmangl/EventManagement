@@ -18,6 +18,9 @@
     <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     
-    <mapping class="com.sapient.model.UserLoginInfo" />        
+    <mapping class="com.sapient.model.UserLoginInfo" />  
+    <mapping class="com.sapient.model.Event"/>
+    <mapping class="com.sapient.model.Transaction"/>      
+    <mapping class="com.sapient.model.UserSignUpInfo"/>
   </session-factory>
 </hibernate-configuration>

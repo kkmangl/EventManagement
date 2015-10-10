@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Hello this is login.jsp
+	You have successfully added
 </body>
 </html>

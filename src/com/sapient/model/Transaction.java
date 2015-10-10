@@ -2,6 +2,7 @@ package com.sapient.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -9,6 +10,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name="TRANSACTION")
 public class Transaction {
+	@Id
 	
 	@Column(name="USERNAME",nullable=false)
 	@NotEmpty
@@ -16,7 +18,7 @@ public class Transaction {
 	
 	@Column(name="EVENT_ID",nullable=false)
 	@NotEmpty
-	private String  event_id;
+	private int  event_id;
 	
 	public String getUsername() {
 		return username;
@@ -24,10 +26,10 @@ public class Transaction {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getEvent_id() {
+	public int getEvent_id() {
 		return event_id;
 	}
-	public void setEvent_id(String event_id) {
+	public void setEvent_id(int event_id) {
 		this.event_id = event_id;
 	}
 	

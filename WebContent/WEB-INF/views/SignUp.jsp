@@ -15,7 +15,7 @@
 		<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="/EventManagement/home" class="navbar-brand">Event Management</a>
+					<a href="/EventManagement/home" class="navbar-brand">${logsesh}</a>
 				</div>
 			</div>
 		</div>

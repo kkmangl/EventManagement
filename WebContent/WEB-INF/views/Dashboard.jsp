@@ -37,13 +37,13 @@ body {
 		<div class="navbar navbar-default navbar-fixed-top navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<a href="/EventManagement/redirect" class="navbar-brand">Event Management</a>
+					<a href="/EventManagement/redirect" class="navbar-brand">${logsesh}</a>
 				</div>
 				<div class="collpase navbar-collapse" id="example">
 					<ul class="nav navbar-nav">
-						<li ><a href="upcoming">Home</a></li>
-						<li><a href="AddEvent.jsp">Add Event</a></li>
-						<li class="active"><a href="dashboard.htm">Dashboard</a></li>
+						<li ><a href="/EventManagement/redirect">Home</a></li>
+						<li><a href="/EventManagement/addEvent">Add Event</a></li>
+						<li class="active"><a href="#">Dashboard</a></li>
 					</ul>
 					<div>
 						<form action="" class="navbar-form navbar-right" role="search">
@@ -53,9 +53,9 @@ body {
 							</div>
 							<button type="submit" class="btn btn-primary" name="Search">Search</button>
 						</form>
-						<form action="index.html" class="navbar-form navbar-right"
-							method="post">
-							<a href="index.html"><button type="submit"
+						<form action="/EventManagement/invalidate" class="navbar-form navbar-right"
+							method="get">
+							<a href=""><button type="submit"
 									class="btn btn-success" name="logout">Logout</button></a>
 						</form>
 					</div>

@@ -53,4 +53,10 @@ public class LoginController {
 	public ModelAndView fetchLoginPage() {
 		return new ModelAndView("index", "command", new UserLoginInfo());
 	}
+	
+	@RequestMapping(value="/invalidate", method = RequestMethod.GET)
+	public ModelAndView invalidatePage(HttpSession session) {
+		session.invalidate();
+		return new ModelAndView("index", "command", new UserLoginInfo());
+	}
 }

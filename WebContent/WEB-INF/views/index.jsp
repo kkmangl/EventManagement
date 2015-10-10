@@ -73,9 +73,9 @@
  		</table> - --%>
 
 
-				<div class="form-group" style="text-align: center;">
+				<!-- <div class="form-group" style="text-align: center;">
 					<a href="">Forget password</a>
-				</div>
+				</div> -->
 			</form:form>
 
 		</div>

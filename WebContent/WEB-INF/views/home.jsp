@@ -50,7 +50,7 @@ body {
 					<span class="icon-bar"></span> 
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="/EventManagement/redirect">Event Management</a>
+				<a class="navbar-brand" href="/EventManagement/redirect">${logsesh}</a>
 			</div>
 
 			<div class="collpase navbar-collapse" id="menue">
@@ -63,7 +63,7 @@ body {
 					
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.html"><span
+					<li><a href="/EventManagement/invalidate"><span
 							class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
 				</ul>
 			</div>
